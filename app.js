@@ -199,7 +199,7 @@ const addBookToBasket = (bookId) => {
     }
   }
   listBasketItem();
-  toastr["success"]("Product added successfully to the cart.");
+  toastr["success"]("Ürün sepete başarıyla eklendi..");
 };
 
 const removeItemToBasket = (bookId) => {
@@ -210,7 +210,7 @@ const removeItemToBasket = (bookId) => {
     basketList.splice(foundIndex, 1);
   }
   listBasketItem();
-  toastr.succsess("Product deleted from the cart.");
+  toastr.succsess("Ürün sepetten silindi..");
 };
 
 const decreaseItemToBasket = (bookId) => {
@@ -233,7 +233,7 @@ const increaseItemToBasket = (bookId) => {
   if (foundIndex != -1) {
     if (basketList[foundIndex].quantity != basketList[foundIndex].product.stock)
       basketList[foundIndex].quantity += 1;
-    else toastr["error"]("Sorry, we don't have enough stock.");
+    else toastr["error"]("Üzgünüz, yeterli stokumuz yok..");
   }
   listBasketItem();
 };
